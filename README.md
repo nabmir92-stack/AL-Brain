@@ -59,3 +59,126 @@ Verified Result
   |
   v
 Human
+
+The LLM is not treated as the authoritative source for numerical calculations.
+
+Deterministic components independently calculate and validate critical results.
+
+Experimental Conditions
+
+The research compares three experimental conditions.
+
+Experiment A — LLM Only
+Human
+  |
+  v
+LLM
+  |
+  v
+Answer
+
+This establishes the baseline performance of the language model without an independent computational architecture.
+
+Experiment B — General-Purpose LLM + AL-Brain
+Human
+  |
+  v
+LLM
+  |
+  v
+Structured Task
+  |
+  v
+AL-Brain
+  |
+  +--> Calculation
+  |
+  +--> Validation
+  |
+  v
+Answer
+
+This evaluates whether deterministic computation and validation improve reliability.
+
+Experiment C — Fine-Tuned LLM + AL-Brain
+Human
+  |
+  v
+Fine-Tuned LLM
+  |
+  v
+Structured Task
+  |
+  v
+AL-Brain
+  |
+  +--> Calculation
+  |
+  +--> Validation
+  |
+  v
+Answer
+
+This evaluates whether domain-specific adaptation provides additional improvements beyond the general-purpose LLM + AL-Brain architecture.
+
+Evaluation
+
+The benchmark will include static, dynamic, adversarial, and high-complexity industrial scenarios.
+
+Scenarios may contain:
+
+Multi-level bills of materials
+Multiple production operations
+Machine capacity constraints
+Inventory limitations
+Work-in-progress
+Production batches
+Deadlines and priorities
+Setup times
+Equipment downtime
+Equipment failures
+Material shortages
+Quality defects
+Changing conditions
+Incomplete information
+Conflicting information
+Infeasible requirements
+Ambiguous terminology
+
+Evaluation metrics include:
+
+Interpretation accuracy
+Structured-task accuracy
+Calculation accuracy
+Constraint handling
+Temporal reasoning
+Contradiction detection
+Incomplete-information detection
+Hallucination rate
+Clarification quality
+Error recovery
+Consistency
+Generalization
+Latency
+Token usage
+API cost
+Research Principle
+
+The goal is not to demonstrate that an LLM can replace specialized industrial software.
+
+The goal is to determine:
+
+Which reasoning and interpretation tasks can be reliably delegated to an LLM.
+Which tasks require deterministic computational control.
+Which errors can be detected by independent validation.
+Whether domain-specific fine-tuning improves reliability and generalization.
+Whether combining LLM reasoning with deterministic systems provides measurable advantages over LLM-only reasoning.
+Status
+
+Research prototype.
+
+The project is under active experimental development.
+
+License
+
+MIT License
